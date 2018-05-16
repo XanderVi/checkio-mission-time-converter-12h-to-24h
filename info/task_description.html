@@ -1,0 +1,56 @@
+<!-- Describe task in general -->
+
+<p>
+    You are the modern man who prefer 24-hours time format. But in some places is used 12-hours format. Your task is to convert time from 12-h format into 24-h using the next rules:<br>
+- the output format should be 'hh:mm'<br>
+- if the output hours is less than 10 - write a '0' before it. For example: '09:05'<br>
+
+You can find some useful information about <a href='https://en.wikipedia.org/wiki/12-hour_clock'>12-hours format</a>.
+</p>
+
+<!--
+<p style="text-align: center;">
+    <img  title="Time" src="{{MEDIA}}time.png" alt="example" style="max-height: 220px"/>
+</p>
+-->
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> Time in 12-hours format (as string).
+</p>
+
+<p>
+    <strong>Output: </strong> Time in 24-hours format (as string).
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">timeConverter('12:30 p.m.') == '12:30'
+timeConverter('9:00 a.m.') == '09:00'
+timeConverter('11:15 p.m.') == '23:15'
+</pre>
+{% else %}
+<pre class="brush: python">time_converter('12:30 p.m.') == '12:30'
+time_converter('9:00 a.m.') == '09:00'
+time_converter('11:15 p.m.') == '23:15'
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    For work with the different time formats.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Precondition</strong>:<br>
+    '00:00' <= time <= '23:59'
+</p>
